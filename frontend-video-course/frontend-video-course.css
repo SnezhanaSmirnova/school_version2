@@ -1,0 +1,892 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+  outline: none;
+}
+
+select {
+  outline: none;
+}
+
+@font-face {
+  font-family: Montserrat-Medium; /* Гарнитура шрифта */
+  src: url(../fonts/Montserrat/Montserrat-Medium.ttf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: Montserrat-Regular; /* Гарнитура шрифта */
+  src: url(../fonts/Montserrat/Montserrat-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: Montserrat-Bold; /* Гарнитура шрифта */
+  src: url(../fonts/Montserrat/Montserrat-Bold.ttf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: Montserrat-Light; /* Гарнитура шрифта */
+  src: url(../fonts/Montserrat/Montserrat-Light.ttf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: Montserrat-SemiBold; /* Гарнитура шрифта */
+  src: url(../fonts/Montserrat/Montserrat-SemiBold.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* новые шрифты */
+@font-face {
+  font-family: Montserrat Alternates ExtraBold; /* Гарнитура шрифта */
+  src: url(../fonts/Montserrat_Alternates/MontserratAlternates-ExtraBold.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+  font-family: Montserrat Alternates-Regular; /* Гарнитура шрифта */
+  src: url(../fonts/Montserrat_Alternates/MontserratAlternates-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+  font-family: Aleo-Regular; /* Гарнитура шрифта */
+  src: url(../fonts/Aleo/Aleo-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+  font-family: Russo One; /* Гарнитура шрифта */
+  src: url(../fonts/Russo_One/RussoOne-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+  font-family: Century-Gothic; /* Гарнитура шрифта */
+  src: url(../fonts/centurygothic/GOTHIC.TTF); /* Путь к файлу со шрифтом */
+}
+@font-face {
+  font-family: Rubic-Mono-One; /* Гарнитура шрифта */
+  src: url(../fonts/Rubik_Mono_One/RubikMonoOne-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+  font-family: Krona-One; /* Гарнитура шрифта */
+  src: url(../fonts/Krona_One/KronaOne-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+  font-family: Roboto; /* Гарнитура шрифта */
+  src: url(../fonts/Roboto/Roboto-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+  font-family: Roboto-Light; /* Гарнитура шрифта */
+  src: url(../fonts/Roboto/Roboto-Light.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* header navigation */
+
+.header__wrapper {
+  
+  background-color: white;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: -40px;
+  z-index: 3;
+}
+
+.header__logo-wrapper {
+  width: 87px;
+  height: 36px;
+  background: linear-gradient(#12338b, #7d7317);
+}
+.header__logo {
+  width: 81px;
+  height: 30px;
+  background-color: white;
+  position: relative;
+  top: 3px;
+  left: 3px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  text-align: center;
+}
+.header__logo-title {
+  font-family: Russo One;
+  font-size: 1vw;
+}
+.header__logo-title-letter1 {
+  color: #ffd600;
+}
+.header__logo-title-letter2 {
+  color: #39a3d0;
+}
+.header__logo-title-letter3 {
+  color: #1c5aa1;
+}
+.header__logo-title-letter4 {
+  color: #1c5aa1;
+}
+.header__logo-subtitle {
+  font-family: Aleo-Regular;
+  font-size: 0.4vw;
+  color: #2e4a98;
+}
+.header__entry-button {
+  width: 100%;
+  border: 1px solid #d3c546;
+  border-radius: 3px;
+  background: white;
+  font-family: Montserrat-bold;
+  font-size: 1vw;
+  letter-spacing: 0.005em;
+  color: #573e0d;
+  padding: 5px 10px;
+}
+.header__nav {
+  width: 35%;
+}
+.header__nav-ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  width: 100%;
+}
+
+.header__nav-item {
+  font-family: Montserrat-Regular;
+  font-size: 1.1vw;
+  color: #362e04;
+}
+.header__telephon {
+  width: 35%;
+  display: flex;
+  justify-content: flex-end;
+}
+.header__telephon-text {
+  margin-right: 10%;
+  font-family: Montserrat-Light;
+  font-size: 0.9vw;
+  color: #5f4e15;
+}
+.header__telephon-number {
+  font-family: Montserrat-Regular;
+  font-size: 1vw;
+  color: #836a10;
+  letter-spacing: 0.005em;
+}
+
+
+/* course-start */
+
+.course-start__wrapper{
+  font-family: Montserrat-Regular;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.course-start__line{
+  display: flex;
+  width: 100%;
+  justify-content: space-between; 
+}
+
+.course-start__line2{
+  margin-top: 40px;
+  width: 1072px;
+  height: 25px;
+  background: linear-gradient(99.31deg, rgba(255, 181, 38, 0.64) 18.13%, rgba(255, 214, 0, 0.64) 93.46%);
+  box-shadow: 0px 7px 9px rgba(100, 85, 7, 0.06);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.course-start__title{
+  width: 100%;
+  font-size: 200px;
+  color: #322A02;
+  padding-left: 168px;
+  font-family: Montserrat-Bold;
+  font-weight: 900;
+  margin-bottom: 50px;
+  
+}
+.course-start__block{
+  display: flex;
+  justify-content: space-between;
+}
+.course-start__box{
+  width: 100%;
+  background: linear-gradient(99.31deg, #FFB800 18.13%, #FFE600 93.46%);
+  box-shadow: 0px 7px 9px rgba(100, 85, 7, 0.18);
+}
+
+.course-start__box-title{
+  padding-left: 168px;
+  padding-top: 30px;
+  font-size: 30px;
+  line-height: 37px;
+  color: #0D0A00;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+.course-start__box-subtitle{
+  padding-left: 168px;
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #0D0A00;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+.course-start__box-subtitle a{
+  color: #0D0A00;
+  text-decoration-line: underline;
+}
+.course-start__box-info-wrapper{
+  display: flex;
+  padding-left: 168px;
+  padding-top: 20px;
+  margin-top: 50px;
+}
+
+.course-start__form{
+margin-right: 40px;
+width: 360px;
+}
+
+.course-start__form-button{
+  width: 360px;
+  padding: 20px;
+  background: linear-gradient(189.03deg, #545BF3 9.57%, #061879 95.91%);
+  box-shadow: 0px 33px 45px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+  color: white;
+  font-size: 25px;
+}
+.course-start__form-button-consultation{
+  width: 360px;
+  padding: 20px;
+  background: linear-gradient(189.03deg, #3236A4 9.57%, #010933 95.91%);
+  box-shadow: 0px 33px 45px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+  margin-top: 20px;
+  color: white;
+  font-size: 18px;
+}
+.course-start__box-info-text{
+  font-family: Montserrat-Light;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: #0D0A00;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  padding-right: 30px;
+}
+/* realize */
+.realize__wrapper{
+  display: flex;
+  justify-content: space-around;
+  margin: 70px 150px;
+}
+.realize__box{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.realize__p{
+  font-family: Roboto-Light;
+  font-size: 21px;
+  margin-top: 20px;
+  color: #1D1600;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  
+}
+
+
+/* frontend-is */
+
+.frontend-is__wrapper{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Montserrat-Regular;
+  color: white;
+  background: linear-gradient(101.24deg, #110966 29.77%, #0C0089 97.93%);
+}
+.frontend-is__title{
+  width: 100%;
+  display: flex;
+  margin: 30px 100px;
+}
+.frontend-is__title-text{
+  font-size: 36px;
+  margin-left: 20px;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+.frontend-is__block{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.frontend-is__block-img{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.frontend-is__block-text{
+  font-family: Montserrat-Light;
+  width: 50%;
+}
+.frontend-is__block-text p{
+  font-family: Montserrat-Light;
+width: 730px;
+font-size: 23px;
+}
+.frontend-is__block-text-subtitle{
+  font-size: 23px;
+  font-family: Montserrat-Bold;
+  margin-top: 15px;
+}
+.frontend-is__block-text-item{
+ margin-left: 70px;
+ display: flex;
+ margin-top: 10px;
+}
+.frontend-is__block-text-li{
+  font-family: Montserrat-Light;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  font-size: 22px;
+  margin-left: 40px;
+  margin-right: 100px;
+}
+.frontend-is__yellow{
+width: 100%;
+display: flex;
+margin: 30px 0px;
+}
+.frontend-is__yellow-box{
+  width: 688px;
+  height: 85px;
+  background: #FFF500;
+}
+.frontend-is__yellow-text{
+  margin-left: 25px;
+  font-size: 27px;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+/* advantages-video */
+
+.advantages-video__wrapper{
+  font-family: Montserrat-Regular;
+}
+.advantages-video__title{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 49px;
+  text-align: center;
+  color: #2C2200;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  margin: 50px 0px;
+
+}
+.advantages-video__title span{
+  font-family: Montserrat-Bold;
+font-size: 45px;
+}
+.advantages-video__block{
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+}
+.advantages-video__box{
+width: 30%;
+text-align: center;
+}
+.advantages-video__box1{
+  margin-top: 50px;
+}
+
+.advantages-video__box1-title{
+margin-bottom: 10px;
+font-family: Montserrat-Bold;
+font-size: 19px;
+line-height: 23px;
+color: #2C2200;
+text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+.advantages-video__box1-text{
+  font-family: Montserrat-Light;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  color: #2C2200;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+.advantages-video__box-img{
+  margin-top: 100px;
+}
+
+/* video-list */
+
+.video-list__wrapper{
+  font-family: Montserrat-Regular;
+}
+.video-list__title{
+  font-family: Montserrat-Bold;
+  font-size: 40px;
+  line-height: 49px;
+  text-align: center;
+  color: #322704;
+  margin: 100px 0px 25px 0px;
+  
+}
+.video-list__title span{
+text-transform: uppercase;
+}
+.video-list__subtitle{
+  font-family: Montserrat-Light;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  color: #322704;
+  margin-bottom: 50px;
+}
+.video-list__block{
+  width: 768px;
+  background: #FFD600;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin:  0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+
+}
+.video-list__block-title{
+  font-size: 27px;
+  line-height: 33px;
+  color: #322704;
+  font-family: Montserrat-SemiBold;
+  padding: 20px 0px;
+}
+.video-list__block-item{
+display: flex;
+padding: 10px 0px;
+
+}
+.video-list__block-item p{
+  font-family: Montserrat-Bold;
+  font-size: 23px;
+  color: #322704;
+  margin-right: 50px;
+  
+}
+.video-list__block-item-input{
+  width: 272px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 0px;
+  background: linear-gradient(180deg, #98EB8A 0%, #5CD360 93.23%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.video-list__block-item-input-free{
+  background: linear-gradient(180deg, #79D92E 0%, #5ABE0C 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.video-list__quote{
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #322704;
+  margin-top: 15px;
+
+}
+
+/* price */
+
+.priсe__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+  width: 100%;
+  background: linear-gradient(111.03deg, #e08a08 7.72%, #ffd600 95.7%);
+}
+.price__wrapper-fon {
+  background: url(../img/fon_price.svg) no-repeat center;
+  background-size: contain;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: relative;
+}
+.prise__sum-block-type {
+  display: flex;
+  justify-content: space-between;
+  font-family: Montserrat-Regular;
+  color: white;
+}
+.prise__sum-block-type-ofline {
+  width: 200px;
+  height: 50px;
+  background: linear-gradient(180deg, #4b60d0 0%, #002e73 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 5px;
+  position: absolute;
+  left: 0;
+  top: 50px;
+}
+.prise__sum-block-type-online {
+  width: 200px;
+  height: 60px;
+  background: linear-gradient(180deg, #051e78 0%, #4354b0 100%);
+  box-shadow: inset 0px 4px 3px rgba(137, 115, 0, 0.35);
+  border-radius: 3px;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 5px;
+  margin-left: 15px;
+}
+
+.prise__sum-block-sale {
+  display: flex;
+  margin-top: 30px;
+  font-family: Montserrat-Regular;
+  margin-top: 140px;
+}
+.prise__sum-block-sale1 {
+  width: 140px;
+  padding: 15px 0px;
+  background: linear-gradient(180deg, #ebff00 0%, #91be30 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-left: 5px;
+  font-size: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.prise__sum-block-sale1 span {
+  font-family: Montserrat-Bold;
+  font-size: 22px;
+  color: #322704;
+  text-align: center;
+}
+
+.priсe__sum {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 100%;
+  background: linear-gradient(179.53deg, #fff500 0.74%, #c4df1f 93.03%);
+  box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.price__sum-p-big {
+  font-family: Montserrat-Bold;
+  font-size: 78px;
+  text-align: center;
+  color: #080065;
+  text-shadow: 0px 4px 1px rgba(0, 0, 0, 0.25);
+  padding: 15px;
+}
+.price__sum-p {
+  padding-top: 15px;
+  font-size: 24px;
+  color: #0d0a00;
+  font-family: Montserrat-Regular;
+}
+.priсe__sum img {
+  padding-bottom: 15px;
+}
+.priсe__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.priсe__form-input {
+  width: 300px;
+  height: 50px;
+  background: #fbf6ec;
+  margin-bottom: 7%;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  appearance: none;
+  text-align: center;
+  text-align-last: center;
+  font-family: Montserrat-Regular;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vw;
+  text-align: center;
+  letter-spacing: -0.005em;
+  color: rgba(6, 13, 32, 0.71);
+}
+.priсe__form-select{
+font-size: 21px;
+}
+.price__form-title {
+  font-family: Montserrat-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2vw;
+  color: #322704;
+  margin: 10% 0;
+}
+.priсe__form-button {
+  height: 50px;
+  background: #8ed815;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 5px;
+  font-family: Montserrat-Regular;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.2vw;
+  letter-spacing: 0.015em;
+  color: #ffffff;
+  padding-left: 10%;
+  padding-right: 10%;
+  border: none;
+  width: 270px;
+  margin-top: 30px;
+}
+.price__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+}
+.price__info-subtitle {
+  font-family: Montserrat-Regular;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.3vw;
+  line-height: 106.4%;
+  color: #322704;
+  text-align: center;
+  margin-top: 20%;
+}
+.price__info-title {
+  font-family: Montserrat Alternates ExtraBold;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 4vw;
+  margin-top: 7%;
+  text-align: center;
+  color: #ffffff;
+}
+
+
+
+
+/* картинки фона, фон на 2 блока */
+.fon_tutors_contact {
+  background: url(../img/fon_tutors.svg) center no-repeat;
+  background-size: contain;
+  width: 100%;
+}
+
+/* сontact */
+.contact__wrapper {
+  display: flex;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 5%;
+}
+.contact__block-info {
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: 2px solid #ffc700;
+  font-family: Roboto;
+  color: #493b08;
+}
+.contact__block-info-title {
+  font-size: 2vw;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 5%;
+}
+.contact__block-info-subtitle {
+  font-size: 1.2vw;
+  text-align: center;
+  margin-top: 2%;
+  color: rgba(73, 59, 8, 0.94);
+}
+.contact__block-infobox {
+  display: flex;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  justify-content: center;
+}
+.contact__block-info-name {
+  width: 30%;
+  margin-left: 25%;
+  font-size: 0.8vw;
+}
+.contact__block-info-text {
+  width: 25%;
+  margin-right: 20%;
+  margin-left: 5%;
+  font-size: 1.1vw;
+}
+
+/* footer */
+
+.footer__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  font-family: Montserrat-Regular;
+  background: linear-gradient(180deg, #082a85 0%, #082165 100%);
+}
+.footer__wrapper1 {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding-top: 3%;
+}
+.footer__form-box {
+  width: 40%;
+}
+.footer__form-title {
+  text-transform: uppercase;
+  font-size: 1vw;
+  text-align: center;
+}
+.footer__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__form-input {
+  width: 75%;
+  height: 42px;
+  text-align: center;
+  margin-top: 5%;
+  border-radius: 5px;
+  border: none;
+}
+
+.footer__form-button {
+  width: 70%;
+  height: 33px;
+  border-radius: 5px;
+  background-color: #4282e1;
+  border: none;
+  color: #ffffff;
+  margin-top: 5%;
+}
+.footer__nav {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+.footer__nav-items {
+  width: 100%;
+  height: 100%;
+}
+.footer__nav-items-ul {
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer__nav-items-ul li {
+  margin-top: 10%;
+}
+.footer__nav-items-link {
+  color: #ffffff;
+  font-size: 1.2vw;
+}
+.footer__nav-items-link:hover {
+  text-decoration: underline;
+}
+.footer__nav-items-link-main {
+  font-family: Montserrat-Bold;
+  font-size: 1.3vw;
+}
+
+.footer__wrapper2 {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 4%;
+  padding-top: 3%;
+}
+.footer__logo {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.footer__logo-wrapper {
+  width: 40%;
+  height: 39px;
+  margin-left: 20%;
+}
+.footer__logo-name {
+  width: 80%;
+  text-align: center;
+  margin-bottom: 4%;
+  font-size: 1.5vw;
+}
+.footer__logo1 {
+  top: 3px;
+  width: 96%;
+  height: 33px;
+  background: linear-gradient(180deg, #082a85 0%, #082165 100%);
+}
+.footer__logo-subtitle {
+  font-size: 0.5vw;
+}
+.footer__contact-adress {
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+.footer___contact-adress-link {
+  color: #ffffff;
+}
+.footer___contact-adress-link:hover {
+  text-decoration: underline;
+}
+
+.footer__right {
+  width: 100%;
+  background: #01094e;
+  color: #dce6e6;
+  font-family: Montserrat-Regular;
+  font-size: 0.7vw;
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}

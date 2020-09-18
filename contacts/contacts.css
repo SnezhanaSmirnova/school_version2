@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+  outline: none;
+}
+
+@font-face {
+  font-family: Montserrat-Regular; /* Гарнитура шрифта */
+  src: url(../fonts/Montserrat/Montserrat-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* header navigation */
+
+.header__wrapper {
+  background-color: white;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: -40px;
+  z-index: 3;
+}
+
+.header__logo-wrapper {
+  width: 87px;
+  height: 36px;
+  background: linear-gradient(#12338b, #7d7317);
+}
+.header__logo {
+  width: 81px;
+  height: 30px;
+  background-color: white;
+  position: relative;
+  top: 3px;
+  left: 3px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  text-align: center;
+}
+.header__logo-title {
+  font-family: Russo One;
+  font-size: 1vw;
+}
+.header__logo-title-letter1 {
+  color: #ffd600;
+}
+.header__logo-title-letter2 {
+  color: #39a3d0;
+}
+.header__logo-title-letter3 {
+  color: #1c5aa1;
+}
+.header__logo-title-letter4 {
+  color: #1c5aa1;
+}
+.header__logo-subtitle {
+  font-family: Aleo-Regular;
+  font-size: 0.4vw;
+  color: #2e4a98;
+}
+.header__entry-button {
+  width: 100%;
+  border: 1px solid #d3c546;
+  border-radius: 3px;
+  background: white;
+  font-family: Montserrat-bold;
+  font-size: 1vw;
+  letter-spacing: 0.005em;
+  color: #573e0d;
+  padding: 5px 10px;
+}
+.header__nav {
+  width: 35%;
+}
+.header__nav-ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  width: 100%;
+}
+
+.header__nav-item {
+  font-family: Montserrat-Regular;
+  font-size: 1.1vw;
+  color: #362e04;
+}
+.header__telephon {
+  width: 35%;
+  display: flex;
+  justify-content: flex-end;
+}
+.header__telephon-text {
+  margin-right: 10%;
+  font-family: Montserrat-Light;
+  font-size: 0.9vw;
+  color: #5f4e15;
+}
+.header__telephon-number {
+  font-family: Montserrat-Regular;
+  font-size: 1vw;
+  color: #836a10;
+  letter-spacing: 0.005em;
+}
+
+/* contact-info */
+.contact__wrapper {
+  display: flex;
+  font-family: Montserrat-Regular;
+  color: #4a3d0d;
+  font-size: 23px;
+  margin: 40px 0px 40px 168px;
+  padding-top: 77px;
+}
+
+.contact__wrapper-info-adress span {
+  color: #d5a809;
+  font-size: 17px;
+  padding-right: 15px;
+}
+table {
+  margin-top: 20px;
+  width: 864px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table,
+td,
+th {
+  border: none;
+}
+td,
+th {
+  padding: 3px;
+  width: 400px;
+  height: 35px;
+  font-size: 20px;
+  color: #4a3d0d;
+}
+.td_gold {
+  width: 45px;
+  color: #d5a809;
+  font-size: 17px;
+  padding-right: 20px;
+}
+
+.maps {
+  width: 70%;
+  margin: auto;
+}
+
+/* footer */
+
+.footer__wrapper {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  font-family: Montserrat-Regular;
+  background: linear-gradient(180deg, #082a85 0%, #082165 100%);
+}
+.footer__wrapper1 {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding-top: 3%;
+}
+.footer__form-box {
+  width: 40%;
+}
+.footer__form-title {
+  text-transform: uppercase;
+  font-size: 1vw;
+  text-align: center;
+}
+.footer__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__form-input {
+  width: 75%;
+  height: 42px;
+  text-align: center;
+  margin-top: 5%;
+  border-radius: 5px;
+  border: none;
+}
+
+.footer__form-button {
+  width: 70%;
+  height: 33px;
+  border-radius: 5px;
+  background-color: #4282e1;
+  border: none;
+  color: #ffffff;
+  margin-top: 5%;
+}
+.footer__nav {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+.footer__nav-items {
+  width: 100%;
+  height: 100%;
+}
+.footer__nav-items-ul {
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer__nav-items-ul li {
+  margin-top: 10%;
+  width: 80%;
+  /* height: 30px; */
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid transparent;
+}
+.footer__nav-items-ul li:hover {
+  border-color: white;
+}
+
+.footer__nav-items-link {
+  font-family: Montserrat-Regular;
+  color: #ffffff;
+  font-size: 1.2vw;
+}
+
+.footer__nav-items-link-main {
+  font-family: Montserrat-Bold;
+  font-size: 1.3vw;
+}
+
+.footer__wrapper2 {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 4%;
+  padding-top: 3%;
+}
+.footer__logo {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.footer__logo-wrapper {
+  width: 40%;
+  height: 39px;
+  margin-left: 20%;
+}
+.footer__logo-name {
+  width: 80%;
+  text-align: center;
+  margin-bottom: 4%;
+  font-size: 1.5vw;
+}
+.footer__logo1 {
+  top: 3px;
+  width: 96%;
+  height: 33px;
+  background: linear-gradient(180deg, #082a85 0%, #082165 100%);
+}
+.footer__logo-subtitle {
+  font-size: 0.5vw;
+}
+.footer__contact-adress {
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+.footer___contact-adress-link {
+  color: #ffffff;
+}
+.footer___contact-adress-link:hover {
+  text-decoration: underline;
+}
+
+.footer__right {
+  width: 100%;
+  background: #01094e;
+  color: #dce6e6;
+  font-family: Montserrat-Regular;
+  font-size: 0.7vw;
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
